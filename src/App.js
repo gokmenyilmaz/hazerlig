@@ -9,6 +9,13 @@ import TurnuvaKayit from './Turnuvalar/TurnuvaKayit';
 import AnaSayfa from './Home/AnaSayfa';
 
 export default class App extends Component {
+
+  state={
+ 
+    isAdmin:true,
+   
+}
+
   render() {
     return (
   
@@ -38,12 +45,21 @@ export default class App extends Component {
             }
           >
 
+
+            {this.state.isAdmin &&
+            <Menu.Item key="55">
+              <Icon type="bank" />
+              <span>*Turnuva Oluştur</span>
+              <Link to="/turnuvaolustur" />
+            </Menu.Item>
+            }
+
+
             <Menu.Item key="51">
               <Icon type="bank" />
-              <span>*turnuvakayit</span>
+              <span>Turnuva Kayıt</span>
               <Link to="/turnuvakayit" />
             </Menu.Item>
-
 
             <Menu.Item key="52">
               <Icon type="bank" />
