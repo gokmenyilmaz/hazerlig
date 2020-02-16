@@ -7,6 +7,7 @@ import SubMenu from 'antd/lib/menu/SubMenu';
 
 import TurnuvaKayit from './Turnuvalar/TurnuvaKayit';
 import AnaSayfa from './Home/AnaSayfa';
+import Error from './Error'
 
 export default class App extends Component {
 
@@ -27,7 +28,7 @@ export default class App extends Component {
           <Menu.Item key="1">
             <Icon type="bank" />
             <span>Ana Sayfa</span>
-            <Link to="/" />
+            <Link to="./" />
           </Menu.Item>
 
           <Menu.Item key="2">
@@ -50,7 +51,7 @@ export default class App extends Component {
             <Menu.Item key="55">
               <Icon type="bank" />
               <span>*Turnuva Oluştur</span>
-              <Link to="/turnuvaolustur" />
+              <Link to="./turnuvaolustur" />
             </Menu.Item>
             }
 
@@ -58,7 +59,7 @@ export default class App extends Component {
             <Menu.Item key="51">
               <Icon type="bank" />
               <span>Turnuva Kayıt</span>
-              <Link to="/turnuvakayit" />
+              <Link to="./turnuvakayit" />
             </Menu.Item>
 
             <Menu.Item key="52">
@@ -100,15 +101,13 @@ export default class App extends Component {
         </Menu>
 </section>
 
-    <section>
+   
         <Switch>
-            <Route path="/" exact component={AnaSayfa} />
-            <Route path="/turnuvakayit" exact component={TurnuvaKayit} />
+            <Route path="./" exact component={AnaSayfa} />
+            <Route path="./turnuvakayit" exact component={TurnuvaKayit} />
             <Route component={Error} />
         </Switch>
-    </section>
-
-
+  
         </BrowserRouter>
     )
   }

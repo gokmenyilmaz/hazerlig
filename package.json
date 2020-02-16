@@ -2,7 +2,7 @@
   "name": "hazerlig",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://hazerligi.com/hazer",
+  "homepage": "https://hazerligi.com/hazer",
   "dependencies": {
     "antd": "^3.26.9",
     "linq": "^3.2.1",
